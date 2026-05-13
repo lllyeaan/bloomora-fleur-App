@@ -11,15 +11,10 @@ class SubmitPage extends StatefulWidget {
 class _SubmitPageState extends State<SubmitPage> {
   final ProductService productService = ProductService();
 
-  final nameController = TextEditingController(text: 'Rose Romance Bouquet');
-  final priceController = TextEditingController(text: '150000');
-  final descriptionController = TextEditingController(
-    text:
-        'Buket mawar merah elegan dengan wrapping premium untuk hadiah romantis.',
-  );
-  final githubController = TextEditingController(
-    text: 'https://github.com/lllyeaan/bloomora-fleur-App.git',
-  );
+  final nameController = TextEditingController(text: '');
+  final priceController = TextEditingController(text: '');
+  final descriptionController = TextEditingController(text: '');
+  final githubController = TextEditingController(text: '');
 
   bool isLoading = false;
 
@@ -99,9 +94,7 @@ class _SubmitPageState extends State<SubmitPage> {
         content: Text(message),
         behavior: SnackBarBehavior.floating,
         backgroundColor: darkText,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(14),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       ),
     );
   }
@@ -116,40 +109,21 @@ class _SubmitPageState extends State<SubmitPage> {
       hintText: hint,
       filled: true,
       fillColor: inputFill,
-      prefixIcon: Icon(
-        icon,
-        color: accentPink,
-      ),
-      labelStyle: const TextStyle(
-        color: softText,
-        fontWeight: FontWeight.w500,
-      ),
-      hintStyle: TextStyle(
-        color: Colors.grey.shade400,
-        fontSize: 14,
-      ),
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: 18,
-        vertical: 16,
-      ),
+      prefixIcon: Icon(icon, color: accentPink),
+      labelStyle: const TextStyle(color: softText, fontWeight: FontWeight.w500),
+      hintStyle: TextStyle(color: Colors.grey.shade400, fontSize: 14),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(18),
-        borderSide: BorderSide(
-          color: Colors.grey.shade200,
-        ),
+        borderSide: BorderSide(color: Colors.grey.shade200),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(18),
-        borderSide: const BorderSide(
-          color: accentPinkSoft,
-        ),
+        borderSide: const BorderSide(color: accentPinkSoft),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(18),
-        borderSide: const BorderSide(
-          color: accentPink,
-          width: 1.5,
-        ),
+        borderSide: const BorderSide(color: accentPink, width: 1.5),
       ),
     );
   }
@@ -179,9 +153,7 @@ class _SubmitPageState extends State<SubmitPage> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: accentPinkSoft,
-                    ),
+                    border: Border.all(color: accentPinkSoft),
                   ),
                   child: IconButton(
                     padding: EdgeInsets.zero,
@@ -228,9 +200,7 @@ class _SubmitPageState extends State<SubmitPage> {
                   decoration: BoxDecoration(
                     color: accentPinkLight,
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: accentPinkSoft,
-                    ),
+                    border: Border.all(color: accentPinkSoft),
                   ),
                   child: const Icon(
                     Icons.local_florist_outlined,
@@ -255,9 +225,7 @@ class _SubmitPageState extends State<SubmitPage> {
                   ],
                 ),
                 borderRadius: BorderRadius.circular(28),
-                border: Border.all(
-                  color: accentPinkSoft,
-                ),
+                border: Border.all(color: accentPinkSoft),
                 boxShadow: [
                   BoxShadow(
                     color: accentPink.withOpacity(0.10),
@@ -274,9 +242,7 @@ class _SubmitPageState extends State<SubmitPage> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: accentPinkSoft,
-                      ),
+                      border: Border.all(color: accentPinkSoft),
                     ),
                     child: const Icon(
                       Icons.card_giftcard_outlined,
@@ -314,9 +280,7 @@ class _SubmitPageState extends State<SubmitPage> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(28),
-                border: Border.all(
-                  color: accentPinkSoft,
-                ),
+                border: Border.all(color: accentPinkSoft),
                 boxShadow: [
                   BoxShadow(
                     color: accentPink.withOpacity(0.06),
@@ -343,7 +307,7 @@ class _SubmitPageState extends State<SubmitPage> {
                     controller: nameController,
                     decoration: inputDecoration(
                       label: 'Nama Buket',
-                      hint: 'Contoh: Rose Romance Bouquet',
+                      hint: ' ',
                       icon: Icons.local_florist_outlined,
                     ),
                   ),
@@ -355,7 +319,7 @@ class _SubmitPageState extends State<SubmitPage> {
                     keyboardType: TextInputType.number,
                     decoration: inputDecoration(
                       label: 'Harga Buket',
-                      hint: 'Contoh: 150000',
+                      hint: ' ',
                       icon: Icons.payments_outlined,
                     ),
                   ),
@@ -429,7 +393,6 @@ class _SubmitPageState extends State<SubmitPage> {
             ),
 
             const SizedBox(height: 18),
-
           ],
         ),
       ),
