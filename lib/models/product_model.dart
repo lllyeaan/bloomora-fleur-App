@@ -1,7 +1,7 @@
 class ProductModel {
   final int id;
   final String name;
-  final double price;
+  final int price;
   final String description;
 
   ProductModel({
@@ -15,11 +15,11 @@ class ProductModel {
     return ProductModel(
       id: json['id'] is int
           ? json['id']
-          : int.tryParse(json['id'].toString()) ?? 0,
+          : int.tryParse(json['id']?.toString() ?? '') ?? 0,
       name: json['name']?.toString() ?? '',
       price: json['price'] is num
-          ? (json['price'] as num).toDouble()
-          : double.tryParse(json['price'].toString()) ?? 0.0,
+          ? (json['price'] as num).toInt()
+          : int.tryParse(json['price']?.toString() ?? '') ?? 0,
       description: json['description']?.toString() ?? '',
     );
   }
@@ -27,7 +27,7 @@ class ProductModel {
   Map<String, dynamic> toJson() {
     return {
       'name': name,
-      'price': price.toInt(),
+      'price': price,
       'description': description,
     };
   }

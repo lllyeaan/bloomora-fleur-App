@@ -18,7 +18,7 @@ class _SubmitPageState extends State<SubmitPage> {
         'Buket mawar merah elegan dengan wrapping premium untuk hadiah romantis.',
   );
   final githubController = TextEditingController(
-    text: 'https://github.com/username-kamu/tugas-pbm-florist',
+    text: 'https://github.com/lllyeaan/bloomora-fleur-App.git',
   );
 
   bool isLoading = false;
