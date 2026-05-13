@@ -34,73 +34,73 @@ class _ProductPageState extends State<ProductPage> {
   final List<ProductModel> BouquetSamples = [
     ProductModel(
       name: 'Topper Bouquet',
-      price: 45000.0,
+      price: 45000,
       description:
           'Buket bunga dengan topper custom, cocok untuk hadiah wisuda, ulang tahun, atau ucapan spesial.',
     ),
     ProductModel(
       name: 'Bouquet Bias/Foto',
-      price: 75000.0,
+      price: 75000,
       description:
           'Buket bunga dengan tambahan foto atau bias pilihan, cocok untuk hadiah personal dan unik.',
     ),
     ProductModel(
       name: 'Pipe Flower Bouquet',
-      price: 65000.0,
+      price: 65000,
       description:
           'Buket pipe flower handmade dengan warna ceria dan tampilan lucu untuk hadiah istimewa.',
     ),
     ProductModel(
       name: 'Single Rose',
-      price: 25000.0,
+      price: 25000,
       description:
           'Buket satu tangkai mawar dengan wrapping cantik, simpel, elegan, dan tetap berkesan.',
     ),
     ProductModel(
       name: 'Artificial Bouquet Rose',
-      price: 55000.0,
+      price: 55000,
       description:
           'Buket mawar artificial yang tahan lama dengan kombinasi warna lembut dan wrapping premium.',
     ),
     ProductModel(
       name: 'Money Bouquet',
-      price: 125000.0,
+      price: 125000,
       description:
           'Buket uang custom dengan dekorasi bunga cantik, cocok untuk hadiah ulang tahun atau wisuda.',
     ),
     ProductModel(
       name: 'Blooms Bouquet',
-      price: 85000.0,
+      price: 85000,
       description:
           'Buket bunga pilihan dengan rangkaian manis dan elegan untuk berbagai momen spesial.',
     ),
     ProductModel(
       name: 'Cherry Blossom Bouquet',
-      price: 90000.0,
+      price: 90000,
       description:
           'Buket bernuansa cherry blossom dengan tampilan soft, feminin, dan romantis.',
     ),
     ProductModel(
       name: 'Blooms Box',
-      price: 110000.0,
+      price: 110000,
       description:
           'Rangkaian bunga dalam box eksklusif yang cocok untuk hadiah ulang tahun atau anniversary.',
     ),
     ProductModel(
       name: 'Cherry Blossom Box',
-      price: 120000.0,
+      price: 120000,
       description:
           'Flower box bertema cherry blossom dengan nuansa pink lembut dan tampilan premium.',
     ),
     ProductModel(
       name: 'Custom Bloom',
-      price: 150000.0,
+      price: 150000,
       description:
           'Buket bunga custom sesuai permintaan warna, tema, dan kebutuhan acara pelanggan.',
     ),
     ProductModel(
       name: 'DIY Flower Class',
-      price: 75000.0,
+      price: 75000,
       description:
           'Paket kelas merangkai bunga sederhana untuk pengalaman kreatif bersama Bloomora Fleur.',
     ),
@@ -171,7 +171,7 @@ class _ProductPageState extends State<ProductPage> {
       return;
     }
 
-    final price = double.tryParse(priceText);
+    final price = int.tryParse(priceText);
 
     if (price == null) {
       showMessage('Harga harus berupa angka.');
